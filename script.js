@@ -1,24 +1,29 @@
-let round = document.querySelector(".round");
-let shape = document.querySelector("#square");
-let btn = document.querySelectorAll("button");
+const round = document.querySelector(".round");
+const shape = document.querySelector("#square");
+const btn = document.querySelectorAll("button");
 
-btn[0].addEventListener("click", ()=>{
-    let newColor = `rgb(${makeColor()}, ${makeColor()}, ${makeColor()})`; // 3$ for RGB
-    round.style.backgroundColor = newColor;
-});
-function makeColor(){
+
+// for changing the color of rounded shape
+btn[0].addEventListener('click', changeColor);
+function generateColor(){
     let color = Math.floor(Math.random() * 255);
     return color;
 }
 
-btn[1].addEventListener("click", ()=>{
-    let name = randomShape();
-    shape.id = name;
-});
-let arr=["square", "round", "diamond", "triangle", "arrow", "frame", "star","cross", "left-point", "right-point", "parallal", "cheg"];
+function changeColor(){
+    let newColor = `rgb(${generateColor()}, ${generateColor()}, ${generateColor()})`;
+    round.style.backgroundColor = newColor;
+}
+
+// for changing the shape
+const shapes = ["square", "round", "diamond", "triangle", "arrow", "frame", "star","cross"];
+
+btn[1].addEventListener('click', changeShape);
 
 function randomShape(){
-    let idx = Math.floor(Math.random() * arr.length); // If we take Math.ceil then it generate a number that is greater than length of array 
-    console.log(idx)
-    return arr[idx];
+    let idx = Math.floor(Math.random() * shapes.length);
+    return shapes[idx];
+}
+function changeShape(){
+    shape.id = randomShape();
 }
