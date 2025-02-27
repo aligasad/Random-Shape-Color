@@ -79,30 +79,6 @@ body{
   background-color: orangered;
   clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 }
-#left-point{
-  width: 100px;
-  height: 100px;
-  background-color: orange;
-  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
-}
-#right-point{
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-}
-#parallal{
-  width: 100px;
-  height: 100px;
-  background-color: orangered;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
-#cheg{
-  width: 100px;
-  height: 100px;
-  background-color: turquoise;
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
 
 button {
 background-color: #000000;
